@@ -517,7 +517,7 @@
 				D644A59819A23305004441E0 /* Model 2.xcdatamodel */,
 				D66A65EA19A025D800BA1D2B /* Model.xcdatamodel */,
 			);
-			currentVersion = D66A65EA19A025D800BA1D2B /* Model.xcdatamodel */;
+			currentVersion = D644A59819A23305004441E0 /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
