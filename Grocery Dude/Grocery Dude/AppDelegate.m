@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Item.h"
+#import "Measurement.h"
 
 #define debug 1
 
@@ -18,29 +19,47 @@
         NSLog(@"%@      %@", self.class, NSStringFromSelector(_cmd));
     }
     
-    NSArray *newItemNames = [NSArray arrayWithObjects:
-                             @"Apples", @"Milk", @"Bread", @"Cheese", @"Sausages", @"Butter", @"Orange Juice", @"Cereal", @"Coffee", @"Eggs", @"Tomatoes", @"Fish", nil];
-    
-    for (NSString * newItemName in newItemNames) {
-        Item * newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:_coreDataHelper.context];
-        newItem.name = newItemName;
-        NSLog(@"Inserted New Managed Object for '%@'", newItem.name);
+    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"Measurement"];
+    [request setFetchLimit:50];
+    NSError * error = nil;
+    NSArray * fetchObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"%@", error);
+    }else{
+        for (Measurement *measurement in fetchObjects) {
+            NSLog(@"Fetched Object = %@", measurement.abc);
+        }
     }
     
-    NSFetchRequest * request = [[[_coreDataHelper model] fetchRequestTemplateForName:@"Test"] copy];
-    
-    NSSortDescriptor * sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSPredicate * filter = [NSPredicate predicateWithFormat:@"name != %@", @"Coffee"];
-    [request setPredicate:filter];
-    
-    NSArray * fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:nil];
-    
-    for (Item * item in fetchedObjects) {
-        NSLog(@"Fetched Object = %@", item.name);
-        [_coreDataHelper.context deleteObject:item];
-    }
+//    for (int i = 0; i < 50000; i++) {
+//        Measurement * newMeasurement = [NSEntityDescription insertNewObjectForEntityForName:@"Measurement" inManagedObjectContext:_coreDataHelper.context];
+//        newMeasurement.abc = [NSString stringWithFormat:@"-->> LOTS OF TEST DATA x%i",i];
+//        NSLog(@"Inserted %@",newMeasurement.abc);
+//    }
+//    [_coreDataHelper saveContext];
+//    NSArray *newItemNames = [NSArray arrayWithObjects:
+//                             @"Apples", @"Milk", @"Bread", @"Cheese", @"Sausages", @"Butter", @"Orange Juice", @"Cereal", @"Coffee", @"Eggs", @"Tomatoes", @"Fish", nil];
+//    
+//    for (NSString * newItemName in newItemNames) {
+//        Item * newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:_coreDataHelper.context];
+//        newItem.name = newItemName;
+//        NSLog(@"Inserted New Managed Object for '%@'", newItem.name);
+//    }
+//    
+//    NSFetchRequest * request = [[[_coreDataHelper model] fetchRequestTemplateForName:@"Test"] copy];
+//    
+//    NSSortDescriptor * sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+//    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+//    
+//    NSPredicate * filter = [NSPredicate predicateWithFormat:@"name != %@", @"Coffee"];
+//    [request setPredicate:filter];
+//    
+//    NSArray * fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:nil];
+//    
+//    for (Item * item in fetchedObjects) {
+//        NSLog(@"Fetched Object = %@", item.name);
+//        [_coreDataHelper.context deleteObject:item];
+//    }
     
 }
 
