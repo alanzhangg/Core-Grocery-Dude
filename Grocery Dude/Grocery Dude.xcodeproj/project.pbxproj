@@ -21,6 +21,8 @@
 		42DA9FA817E8F9EC000E7187 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DA9F8A17E8F9EB000E7187 /* UIKit.framework */; };
 		42DA9FB017E8F9EC000E7187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42DA9FAE17E8F9EC000E7187 /* InfoPlist.strings */; };
 		42DA9FB217E8F9EC000E7187 /* Grocery_DudeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA9FB117E8F9EC000E7187 /* Grocery_DudeTests.m */; };
+		D629735119A62FCA00621533 /* Amount.m in Sources */ = {isa = PBXBuildFile; fileRef = D629735019A62FCA00621533 /* Amount.m */; };
+		D629735319A63D2300621533 /* Model2tomodel3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D629735219A63D2300621533 /* Model2tomodel3.xcmappingmodel */; };
 		D644A59B19A24779004441E0 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = D644A59A19A24779004441E0 /* Measurement.m */; };
 		D6538745199EDE31002D8793 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6538744199EDE31002D8793 /* CoreData.framework */; };
 		D6538749199EE171002D8793 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6538748199EE171002D8793 /* CoreDataHelper.m */; };
@@ -58,6 +60,9 @@
 		42DA9FAD17E8F9EC000E7187 /* Grocery DudeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Grocery DudeTests-Info.plist"; sourceTree = "<group>"; };
 		42DA9FAF17E8F9EC000E7187 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42DA9FB117E8F9EC000E7187 /* Grocery_DudeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_DudeTests.m; sourceTree = "<group>"; };
+		D629734F19A62FCA00621533 /* Amount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Amount.h; sourceTree = "<group>"; };
+		D629735019A62FCA00621533 /* Amount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Amount.m; sourceTree = "<group>"; };
+		D629735219A63D2300621533 /* Model2tomodel3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model2tomodel3.xcmappingmodel; sourceTree = "<group>"; };
 		D644A59819A23305004441E0 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		D644A59919A24779004441E0 /* Measurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measurement.h; sourceTree = "<group>"; };
 		D644A59A19A24779004441E0 /* Measurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measurement.m; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		D66A65EA19A025D800BA1D2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D66A65EC19A0877F00BA1D2B /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		D66A65ED19A0877F00BA1D2B /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		D6FA3AD619A4DA64006459DF /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				D66A65E919A025D800BA1D2B /* Model.xcdatamodeld */,
+				D629735219A63D2300621533 /* Model2tomodel3.xcmappingmodel */,
+				D629734F19A62FCA00621533 /* Amount.h */,
+				D629735019A62FCA00621533 /* Amount.m */,
 				D644A59919A24779004441E0 /* Measurement.h */,
 				D644A59A19A24779004441E0 /* Measurement.m */,
 				D66A65EC19A0877F00BA1D2B /* Item.h */,
@@ -292,8 +301,10 @@
 				42DA9F9D17E8F9EB000E7187 /* ViewController.m in Sources */,
 				42DA9F9717E8F9EB000E7187 /* AppDelegate.m in Sources */,
 				D66A65EB19A025D800BA1D2B /* Model.xcdatamodeld in Sources */,
+				D629735119A62FCA00621533 /* Amount.m in Sources */,
 				D6538749199EE171002D8793 /* CoreDataHelper.m in Sources */,
 				D644A59B19A24779004441E0 /* Measurement.m in Sources */,
+				D629735319A63D2300621533 /* Model2tomodel3.xcmappingmodel in Sources */,
 				42DA9F9317E8F9EB000E7187 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,10 +531,11 @@
 		D66A65E919A025D800BA1D2B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D6FA3AD619A4DA64006459DF /* Model 3.xcdatamodel */,
 				D644A59819A23305004441E0 /* Model 2.xcdatamodel */,
 				D66A65EA19A025D800BA1D2B /* Model.xcdatamodel */,
 			);
-			currentVersion = D644A59819A23305004441E0 /* Model 2.xcdatamodel */;
+			currentVersion = D6FA3AD619A4DA64006459DF /* Model 3.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

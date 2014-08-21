@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Item.h"
 #import "Measurement.h"
+#import "Amount.h"
 
 #define debug 1
 
@@ -19,15 +20,15 @@
         NSLog(@"%@      %@", self.class, NSStringFromSelector(_cmd));
     }
     
-    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"Measurement"];
+    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"Amount"];
     [request setFetchLimit:50];
     NSError * error = nil;
     NSArray * fetchObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
     if (error) {
         NSLog(@"%@", error);
     }else{
-        for (Measurement *measurement in fetchObjects) {
-            NSLog(@"Fetched Object = %@", measurement.abc);
+        for (Amount *amount in fetchObjects) {
+            NSLog(@"Fetched Object = %@", amount.xyz);
         }
     }
     
@@ -37,6 +38,7 @@
 //        NSLog(@"Inserted %@",newMeasurement.abc);
 //    }
 //    [_coreDataHelper saveContext];
+    
 //    NSArray *newItemNames = [NSArray arrayWithObjects:
 //                             @"Apples", @"Milk", @"Bread", @"Cheese", @"Sausages", @"Butter", @"Orange Juice", @"Cereal", @"Coffee", @"Eggs", @"Tomatoes", @"Fish", nil];
 //    
@@ -45,7 +47,8 @@
 //        newItem.name = newItemName;
 //        NSLog(@"Inserted New Managed Object for '%@'", newItem.name);
 //    }
-//    
+//    [_coreDataHelper saveContext];
+//
 //    NSFetchRequest * request = [[[_coreDataHelper model] fetchRequestTemplateForName:@"Test"] copy];
 //    
 //    NSSortDescriptor * sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
@@ -66,6 +69,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]);
+    
+    
     return YES;
 }
 
