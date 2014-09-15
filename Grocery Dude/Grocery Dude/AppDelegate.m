@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "Item.h"
 #import "Measurement.h"
-#import "Amount.h"
+#import "Unit.h"
 
 #define debug 1
 
@@ -27,8 +27,8 @@
     if (error) {
         NSLog(@"%@", error);
     }else{
-        for (Amount *amount in fetchObjects) {
-            NSLog(@"Fetched Object = %@", amount.xyz);
+        for (Unit *unit in fetchObjects) {
+            NSLog(@"Fetched Object = %@", unit.name);
         }
     }
     

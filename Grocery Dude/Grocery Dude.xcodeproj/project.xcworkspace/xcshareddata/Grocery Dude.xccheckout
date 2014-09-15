@@ -10,29 +10,29 @@
 	<string>Grocery Dude</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>ADF11BD0-D35B-4C98-B4A0-0858A9F605C3</key>
+		<key>94C3B5AB2EC71550DB42B1558A7F8CDB382AFE08</key>
 		<string>ssh://github.com/alanzhangg/Core-Grocery-Dude.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Grocery Dude/Grocery Dude.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>ADF11BD0-D35B-4C98-B4A0-0858A9F605C3</key>
+		<key>94C3B5AB2EC71550DB42B1558A7F8CDB382AFE08</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/alanzhangg/Core-Grocery-Dude.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>ADF11BD0-D35B-4C98-B4A0-0858A9F605C3</string>
+	<string>94C3B5AB2EC71550DB42B1558A7F8CDB382AFE08</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>ADF11BD0-D35B-4C98-B4A0-0858A9F605C3</string>
+			<string>94C3B5AB2EC71550DB42B1558A7F8CDB382AFE08</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Core-Grocery-Dude</string>
 		</dict>
